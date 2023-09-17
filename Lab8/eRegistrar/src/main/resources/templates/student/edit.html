@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<h1>Edit Student</h1>
+<form th:action="@{/students/edit/{id}(id=${student.studentId})}" th:object="${student}" method="post">
+    <!-- Input fields for student data -->
+    <input type="text" th:field="*{studentNumber}" placeholder="Student Number" required/>
+    <input type="text" th:field="*{firstName}" placeholder="First Name" required/>
+    <input type="text" th:field="*{middleName}" placeholder="Middle Name" required/>
+    <input type="text" th:field="*{lastName}" placeholder="Last Name" required/>
+    <input type="text" th:field="*{cgpa}" placeholder="CGPA" required/>
+    <input type="date" th:field="*{enrollmentDate}" placeholder="Enrollment Date" required/>
+    <label for="isInternational">International Student:</label>
+    <select th:field="*{isInternational}" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+    <!-- Add more input fields as needed -->
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

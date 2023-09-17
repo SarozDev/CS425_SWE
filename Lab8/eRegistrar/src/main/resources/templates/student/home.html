@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eRegistrar - Home</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a th:href="@{/students/list}"/>List Students</li>
+            <li><a th:href="@{/students/add}"/>Add Student</li>
+            <li><a th:href="@{/students/search}"/>Search Students</li>
+        </ul>
+    </nav>
+
+    <div>
+        <h1>Welcome to eRegistrar</h1>
+        <p>Your one-stop solution for managing student records.</p>
+    </div>
+</body>
